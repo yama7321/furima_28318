@@ -40,7 +40,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :products
-- has_one :card
+- has_many :orders
 - has_one :destination
 
 ## products テーブル
@@ -61,19 +61,19 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
+- has_one :order
+- has_one :destination
 
-## cards テーブル
+## orders テーブル
 
 | Column      | Type    | Options     |
 | ----------- | ------- | ----------- |
-| card_number | integer | null: false |
-| exp_month   | integer | null: false |
-| exp_year    | integer | null: false |
-| security_code | integer | null: false |
 | user_id     | references | null: false, foreign_key: true |
+| product_id  | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
+- belongs_to :product
 
 ## destinations テーブル
 
@@ -85,7 +85,10 @@ Things you may want to cover:
 | house_number | string | null: false |
 | building_building | string |       |
 | phone_number | integer | null: false |
-| user_id  | references | null: false, foreign_key: true |
+| user_id     | references | null: false, foreign_key: true |
+| product_id  | references | null: false, foreign_key: true |
+
 
 ### Association
 - belongs_to :user
+- belongs_to :product
