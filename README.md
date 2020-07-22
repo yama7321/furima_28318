@@ -34,7 +34,7 @@ Things you may want to cover:
 | password | string | null: false |
 | name     | string | null: false |
 | name_kana | string | null: false |
-| birthday | date   | null: false |
+| birthday | integer | null: false |
 
 ### Association
 - has_many :products
