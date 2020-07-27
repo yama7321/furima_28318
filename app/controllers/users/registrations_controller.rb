@@ -16,16 +16,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   private
+
   def user_params
     params.require(:user).permit(:nickname, :email, :password, :password_confirmation, :family_name, :first_name, :family_name_kana, :first_name_kana, :birthday)
   end
-  
 
   def birthday_join
-    if params[:user]["birthday(1i)"].empty? && params[:user]["birthday(2i)"].empty? && params[:user]["birthday(3i)"].empty?
-      return
-    end
-    Date.new(params[:user]["birthday(1i)"].to_i, params[:user]["birthday(2i)"].to_i, params[:user]["birthday(3i)"].to_i)
+    return if params[:user]['birthday(1i)'].empty? && params[:user]['birthday(2i)'].empty? && params[:user]['birthday(3i)'].empty?
+
+    Date.new(params[:user]['birthday(1i)'].to_i, params[:user]['birthday(2i)'].to_i, params[:user]['birthday(3i)'].to_i)
   end
 
   # GET /resource/sign_up
