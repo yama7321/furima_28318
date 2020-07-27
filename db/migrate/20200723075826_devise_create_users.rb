@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DeviseCreateUsers < ActiveRecord::Migration[6.0]
   def change
     create_table :users do |t|
@@ -19,7 +17,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
 
-      ## Rememberable
+      ## Rememberable# frozen_string_literal: true
+
+
       t.datetime :remember_created_at
 
       ## Trackable
