@@ -10,8 +10,6 @@ class Users::SessionsController < Devise::SessionsController
 
   # # POST /resource/sign_in
   def create
-    # sign_in(@user.email, @user.password)
-    # redirect_to root_path
     super
   end
 

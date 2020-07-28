@@ -6,7 +6,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_account_update_params, only: [:update]
 
   def create
-    # binding.pry
     params[:user][:birthday] = birthday_join
     @user = User.new(user_params)
     if @user.save
