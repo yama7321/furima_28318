@@ -88,3 +88,6 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :product
+
+# ER図
+https://cacoo.com/diagrams/uFWlUnLcp8rwbhc0/4B39D
