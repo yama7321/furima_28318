@@ -5,10 +5,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
+
+  
   def create
+    # binding.pry
     params[:user][:birthday] = birthday_join
     @user = User.new(user_params)
     if @user.save
+      sign_up(resource_name, resource)
       redirect_to root_path
     else
       render :new
@@ -27,10 +31,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     Date.new(params[:user]['birthday(1i)'].to_i, params[:user]['birthday(2i)'].to_i, params[:user]['birthday(3i)'].to_i)
   end
 
-  # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+
 
   # POST /resource
   # def create
