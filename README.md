@@ -46,7 +46,6 @@ Things you may want to cover:
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
-| image    | text   | null: false |
 | name     | string | null: false |
 | description | text | null: false |
 | category_id | integer | null: false | # ActiveHashにて実装

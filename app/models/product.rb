@@ -1,6 +1,9 @@
 class Product < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
+
+  has_one_attached :image
+
   belongs_to_active_hash :category
   belongs_to_active_hash :status
   belongs_to_active_hash :shipping_cost
@@ -12,5 +15,5 @@ class Product < ApplicationRecord
   end
 
   
-  has_one_attached :image
+  
 end
