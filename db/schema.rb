@@ -37,11 +37,11 @@ ActiveRecord::Schema.define(version: 2020_07_28_103053) do
     t.text "image", null: false
     t.string "name", null: false
     t.text "description", null: false
-    t.string "category", null: false
-    t.string "status", null: false
-    t.string "shipping_cost", null: false
+    t.integer "category_id", null: false
+    t.integer "status_id", null: false
+    t.integer "shipping_cost_id", null: false
     t.integer "perfecture_id", null: false
-    t.string "shipping_days", null: false
+    t.integer "shipping_days_id", null: false
     t.integer "price", null: false
     t.bigint "user_id", null: false
     t.boolean "sold_out", default: false

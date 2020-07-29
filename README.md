@@ -49,11 +49,11 @@ Things you may want to cover:
 | image    | text   | null: false |
 | name     | string | null: false |
 | description | text | null: false |
-| category | string | null: false |
-| status   | string | null: false |
-| shipping_cost | string | null: false |
+| category_id | integer | null: false | # ActiveHashにて実装
+| status_id   | integer | null: false | # ActiveHashにて実装
+| shipping_cost_id | integer | null: false | # ActiveHashにて実装
 | prefecture_id | integer | null: false | # ActiveHashにて実装
-| shipping_days | string | null: false |
+| shipping_day_id | integer | null: false | # ActiveHashにて実装
 | price    | integer | null: false |
 | user     | references | null: false, foreign_key: true |
 | sold_out | boolean | default: false |
