@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('turbolinks:load', () => {
   const priceInput = document.getElementById("item_price");
   const productTax = document.getElementById("add-tax-price");
   const productProfit= document.getElementById("profit");
@@ -7,5 +7,6 @@ window.addEventListener("DOMContentLoaded", () => {
     productTax.innerHTML = Math.floor(inputValue * 0.1).toLocaleString();
     productProfit.innerHTML = Math.floor(inputValue * 0.9).toLocaleString();
   })
-  }
+}
 );
+
