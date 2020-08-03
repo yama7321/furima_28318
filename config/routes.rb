@@ -4,5 +4,5 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
     sessions: 'users/sessions'
   }
-  resources :products, only: [:new, :create]
+  resources :products, only: [:new, :create, :show]
 end
