@@ -1,6 +1,8 @@
 class Product < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :user
+  has_one :order
+  has_one :destination
 
   has_one_attached :image
 
