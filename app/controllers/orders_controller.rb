@@ -10,7 +10,8 @@ class OrdersController < ApplicationController
   def create
     @order = ProductOrder.new(order_params)
     if @order.valid?
-      pay_item && @order.save_in
+      pay_item
+      @order.save_in
       @product.sold_out = true
       @product.save
       return redirect_to root_path
