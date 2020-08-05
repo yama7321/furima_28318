@@ -81,8 +81,8 @@ Things you may want to cover:
 | prefecture_id | integer | null: false | # ActiveHashにて実装
 | city        | string | null: false |
 | house_number | string | null: false |
-| building_building | string |       |
-| phone_number | integer | null: false |
+| building_number | string |       |
+| phone_number | string | null: false |
 | product     | references | null: false, foreign_key: true |
 
 ### Association
