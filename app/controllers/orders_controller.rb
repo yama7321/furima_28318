@@ -3,6 +3,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:index]
   before_action :not_selling_user?, only: [:index, :create]
   before_action :is_sold_out, only: [:index]
+
   def index
   end
 
